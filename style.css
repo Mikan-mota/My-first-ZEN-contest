@@ -1,0 +1,255 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f4ff; /* A mix of from-blue-50 to-indigo-100 */
+    background-image: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+    margin: 0;
+    padding: 1.5rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #374151; /* text-gray-700 */
+}
+
+/* Container */
+.max-w-4xl { max-width: 896px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.bg-white { background-color: #ffffff; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+.title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1f2937; /* text-gray-800 */
+}
+.icon-blue { color: #2563eb; } /* text-blue-600 */
+
+/* Progress */
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.text-sm { font-size: 0.875rem; }
+.text-gray-600 { color: #4b5563; }
+.progress-bar-container {
+    width: 100%;
+    background-color: #e5e7eb; /* bg-gray-200 */
+    border-radius: 9999px;
+    height: 0.5rem;
+    margin-bottom: 2rem;
+}
+.progress-bar {
+    background-color: #2563eb; /* bg-blue-600 */
+    height: 0.5rem;
+    border-radius: 9999px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Scenario View */
+.situation-box {
+    background-color: #fefce8; /* bg-yellow-50 */
+    border-left: 4px solid #facc15; /* border-yellow-400 */
+    padding: 1.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.situation-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.situation-p {
+    font-size: 1.125rem;
+    color: #374151; /* text-gray-700 */
+    margin: 0;
+}
+.responses-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.responses-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+/* Response Buttons */
+.response-btn {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 0.5rem;
+    border: 2px solid #d1d5db; /* border-gray-300 */
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: #1f2937; /* text-gray-800 */
+    font-size: 1rem;
+}
+.response-btn:hover:not(:disabled) {
+    border-color: #60a5fa; /* hover:border-blue-400 */
+    background-color: #eff6ff; /* hover:bg-blue-50 */
+}
+.response-btn:disabled {
+    cursor: not-allowed;
+}
+.response-btn.correct {
+    border-color: #22c55e; /* border-green-500 */
+    background-color: #f0fdf4; /* bg-green-50 */
+}
+.response-btn.incorrect {
+    border-color: #ef4444; /* border-red-500 */
+    background-color: #fef2f2; /* bg-red-50 */
+}
+.response-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon-correct { color: #16a34a; } /* text-green-600 */
+.icon-incorrect { color: #dc2626; } /* text-red-600 */
+
+/* Feedback Box */
+.feedback-box {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+.feedback-box.correct {
+    background-color: #f0fdf4; /* bg-green-50 */
+    border: 1px solid #bbf7d0; /* border-green-200 */
+}
+.feedback-box.incorrect {
+    background-color: #fef2f2; /* bg-red-50 */
+    border: 1px solid #fecaca; /* border-red-200 */
+}
+.feedback-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+.feedback-p {
+    color: #374151;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.next-button {
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+}
+.next-button.blue {
+    background-color: #2563eb; /* bg-blue-600 */
+}
+.next-button.blue:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+.next-button.green {
+    background-color: #16a34a; /* bg-green-600 */
+}
+.next-button.green:hover {
+    background-color: #15803d; /* hover:bg-green-700 */
+}
+
+/* Result View */
+.result-content {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.result-emoji { font-size: 4rem; margin-bottom: 1rem; }
+.result-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+.result-score-box {
+    background-color: #eff6ff; /* bg-blue-50 */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.result-score-p {
+    font-size: 1.25rem;
+    color: #374151;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+.result-message-p {
+    color: #4b5563;
+    margin: 0;
+}
+.reset-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+.reset-button:hover { background-color: #1d4ed8; }
+
+/* Points Box */
+.points-box {
+    margin-top: 2rem;
+    background-color: #f9fafb; /* bg-gray-50 */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.points-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.points-title {
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+.points-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    .parent > * + * {
+  margin-top: 0.5rem;
+}
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+.points-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
